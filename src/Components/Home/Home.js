@@ -4,12 +4,21 @@ import './Home.css'
 
 const Home = () => {
     const [products, setProducts] = useState([])
+    const [cart, setCart] = useState([]);
 
     useEffect( () => {
         fetch('Products.json')
         .then(res => res.json())
         .then(data => setProducts(data))
     } , [])
+
+    
+
+    const handleAddToCart = (product) => {
+        console.log(product)
+        const added = [...cart + product]
+        setCart(added);
+    }
 
     return (
         <div className='home-container'>
@@ -19,12 +28,15 @@ const Home = () => {
            {
                 products.map( product => <Product
                     product = {product}
-                    key={product.id}></Product> )
+                    key={product.id}
+                    handleAddToCart={handleAddToCart}
+                    ></Product> )
             }
            </div>
             </div>
             <div className="cart-container">
                 <h3>Cart</h3>
+                <p>Selected Items: {cart.length}</p>
             </div>
         </div>
     );

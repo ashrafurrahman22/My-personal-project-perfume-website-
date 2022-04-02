@@ -22,7 +22,9 @@
 .products-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin-left: 3%;
+    grid-gap: 18px;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-top: 2%;
+    margin-bottom: 2%;
 }
