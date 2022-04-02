@@ -1,0 +1,18 @@
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    background-color: slategray;
+    align-items: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+
+.footerName {
+    margin-left: 8%;
+}
+/* 
+.payBill {
+    margin-left: 8%;
+} */

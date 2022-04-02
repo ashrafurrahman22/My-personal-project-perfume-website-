@@ -1,0 +1,41 @@
+.container {
+    background-color: slategray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name {
+    margin-left: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.navbar a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: large;
+}
+.navbar a:hover {
+    color: greenyellow;
+}
+.navbar {
+    margin-right: 5%;
+}
+
+
+
+ /* making it responsive responsive  */
+@media only screen and (max-width:688px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+    }
+    .name {
+        text-align: center;
+    }
+    .navbar a {
+        text-align: center;
+    }
+}
